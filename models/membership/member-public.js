@@ -1,11 +1,11 @@
 const schema = require('./member');
 
-const brief = "first_name last_name photo";
-const detail = "first_name last_name photo";
-const create = "first_name last_name photo";
-const edit = "first_name last_name photo";
-const textSearch = "first_name last_name";
-const index = "first_name last_name";
+const brief = "firstname lastname photo";
+const detail = "firstname lastname photo";
+const create = "firstname lastname photo";
+const edit = "firstname lastname photo";
+const textSearch = "firstname lastname";
+const index = "firstname lastname";
 
 const views = [brief, detail, create, edit, textSearch, index];
 

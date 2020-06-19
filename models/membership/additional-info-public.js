@@ -13,7 +13,7 @@ var views = [brief, detail, creat, edit, textSearch, index];
 module.exports = {
     schema,
     views,
-    api: 'CRU',
+    api: 'LCRU',
     name: 'Additional Member Information',
     // patch: ['muser_id'], //field is member which is already defined, so no need to patch
     owner: { enable: true, type: 'user', field: 'member' },

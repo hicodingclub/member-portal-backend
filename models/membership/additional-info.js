@@ -45,11 +45,12 @@ const schema = new Schema({
         type: String,
         enum: ['No', 'Yes, web access only', 'Yes, web and git access'],
         elementunique: true,
-        description: 'which team do you want to join first?',
         required: true
     },
-    member: { type: Schema.Types.ObjectId, ref: 'Member' }, //reference to the associated member. Not required to allow any one to register.
+    member: { type: Schema.Types.ObjectId, ref: 'Member', required: true }, //reference to the associated member. Not required to allow any one to register.
 
 });
+
+schema.index({ member: 1 }, { unique: true }); // schema level
 
 module.exports = schema;

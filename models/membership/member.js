@@ -34,8 +34,8 @@ const schema = new Schema({
     password: { type: String, required: true },
 
 
-    first_name: { type: String, maxlength: 100 },
-    last_name: { type: String, maxlength: 100 },
+    firstname: { type: String, maxlength: 100 },
+    lastname: { type: String, maxlength: 100 },
     photo: {
         type: String,
         mraType: 'picture',

@@ -1,9 +1,13 @@
 let memberDef = require('./member-admin');
 let additionalInfoDef = require('./additional-info-admin');
+let boardDef = require('./board-admin');
+let leadDef = require('./lead-admin');
 
 const schemas = {
     Member: memberDef,
     AdditionalInfo: additionalInfoDef,
+    Board: boardDef,
+    Lead: leadDef,
 };
 
 const config = {
