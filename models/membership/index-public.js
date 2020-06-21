@@ -22,4 +22,9 @@ const authz = {
     'AdditionalInfo': { 'LoginUser': { 'others': '', 'own': 'RU' }, 'Anyone': 'C' },
 }
 
-module.exports = { schemas, config, authz };
+const DB_CONFIG = {
+    APP_NAME: process.env.APP_NAME,
+    MODULE_NAME: __dirname.split('/').slice(-1)[0], //last part of the dir
+};
+
+module.exports = { schemas, config, authz, DB_CONFIG };
