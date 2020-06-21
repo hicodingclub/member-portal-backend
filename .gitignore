@@ -70,6 +70,7 @@ public-admin
 .idea/*
 
 storage/uploads/*
+!storage/uploads/readme.txt
 
 .ses.json
 .ses.*
