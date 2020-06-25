@@ -22,6 +22,6 @@ module.exports = {
 
 
     mraBE: {
-        collection: 'musers', // MongdoDB collection corresponding to this schema
+        collection: 'hcc_mem_auth_muser', // MongdoDB collection corresponding to this schema
     },
 };
