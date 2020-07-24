@@ -35,7 +35,7 @@ const defaultUserDef = authServer.authUserDef;
 option = {
     authz: 'role', // user group based authorization
     authzModel: 'user', // generate default authorization module based on 'user'.
-    registerEmailVerification: false,
+    registerEmailVerification: true,
 };
 const authRouter = authServer.GetDefaultAuthnRouter(defaultUserDef, option);
 authRouter.setEmailer(emailer, emailInfoForAuth); // set the emailer instance for sending emails
