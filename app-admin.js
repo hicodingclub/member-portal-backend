@@ -15,7 +15,7 @@ const meanRestExpress = require('@hicoder/express-core');
 const { GetEmailingManageRouter, MddsEmailer } = require('@hicoder/express-emailing');
 const awsConfFile = path.join(appRootPath.toString(), process.env.AWS_CONFIG_FILE_NAME || '.aws.conf.json');
 const emailer = new MddsEmailer(awsConfFile);
-setTimeout( () => {emailer.startDaemon()}, 20000 );
+setTimeout(() => { emailer.startDaemon() }, 20000);
 
 const emailInfoForAuth = {
     serverUrl: process.env.ADMIN_SERVER_URL || 'http://localhost:3001',
@@ -53,6 +53,7 @@ const emailingRouter = GetEmailingManageRouter("Emailing", authFuncs);
 // for membership models
 const membershipDbDefinition = require('./models/membership/index');
 const membershipRouter = meanRestExpress.RestRouter(membershipDbDefinition, 'Membership', authFuncs);
+membershipRouter.setEmailer(emailer, {});
 // academicsRouter.setEmailer(emailer, {}); // set the emailer instance for sending emails
 
 // for public models
