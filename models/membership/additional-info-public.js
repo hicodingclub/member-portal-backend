@@ -5,7 +5,7 @@ var detail = "grade team[Desired Team] guardianEmail programmingSkill designingS
 var creat = "grade team[Desired Team] guardianEmail programmingSkill designingSkill githubExp[Github Experience]";
 var edit = "grade guardianEmail programmingSkill designingSkill githubExp[Github Experience]";
 var textSearch = "grade guardianEmail";
-var index = "grade";
+var index = "";
 
 var views = [brief, detail, creat, edit, textSearch, index];
 

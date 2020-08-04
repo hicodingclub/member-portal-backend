@@ -13,7 +13,7 @@ const schema = new Schema({
     },
     guardianEmail: {
         type: String,
-        required: false,
+        required: true,
         maxlength: 100,
         trim: true,
         lowercase: true,

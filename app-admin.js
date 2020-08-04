@@ -27,7 +27,8 @@ const emailInfoForAuth = {
 let option = {
     authz: 'role', // admin role based authorization
 };
-const authApp = require('@hicoder/express-auth-app');
+const AuthApp = require('@hicoder/express-auth-app');
+const authApp = new AuthApp();
 const authFuncs = authApp.getAuthFuncs(option);
 //for auth server
 const authServer = require('@hicoder/express-auth-server');
@@ -39,7 +40,7 @@ option = {
 const authRouter = authServer.GetDefaultAuthnRouter(authAccountDef, option);
 authRouter.setEmailer(emailer, emailInfoForAuth); // set the emailer instance for sending emails
 
-const authzAccessRouter = authServer.GetDefaultAccessManageRouter('Access', authFuncs); // manage public access module
+const authzAccessRouter = authServer.GetDefaultUserRolesManageRouter('Roles', authFuncs); // manage public access module
 const authzRolesRouter = authServer.GetDefaultRolesManageRouter('Roles', authFuncs); // manage admin roles module
 authzRolesRouter.setEmailer(emailer, {});
 
